@@ -18,11 +18,11 @@ export const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
   return (
     <>
       <Background />
-      <Navbar disableNavbar={disableNavbar} />
+      <Navbar disableNavbar={true} />
       {children}
-      <SupportModal />
-      <Snackbar />
-      <PartnerThemeFooterImage />
+      {/* <SupportModal /> */}
+      {/* <Snackbar /> */}
+      {/* <PartnerThemeFooterImage /> */}
     </>
   );
 };

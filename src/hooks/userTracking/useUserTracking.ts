@@ -33,11 +33,11 @@ const googleEvent = ({
           | Record<number, TransformedRoute>;
       };
 }) => {
-  typeof window !== 'undefined' &&
-    window?.gtag('event', action, {
-      category: category,
-      ...data,
-    });
+  // typeof window !== 'undefined' &&
+  //   window?.gtag('event', action, {
+  //     category: category,
+  //     ...data,
+  //   });
 };
 
 const addressableEvent = ({
@@ -50,25 +50,7 @@ const addressableEvent = ({
   label: string;
   data: TrackTransactionDataProps | JumperEventData;
   isConversion?: boolean;
-}) => {
-  const dataArray = [];
-  if (label) {
-    dataArray.push({ name: 'label', value: label });
-  }
-
-  typeof window !== 'undefined' &&
-    data &&
-    window.__adrsbl.run(
-      action,
-      isConversion ?? false,
-      dataArray.concat(
-        Object.entries(data).map(([key, value]) => ({
-          name: `${key}`,
-          value: `${value}`,
-        })),
-      ),
-    );
-};
+}) => {};
 
 export function useUserTracking() {
   const { account } = useAccount();

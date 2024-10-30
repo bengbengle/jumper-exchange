@@ -135,15 +135,15 @@ export default async function RootLayout({
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID}`}
         />
-        <Script id="google-analytics">
+        {/* <Script id="google-analytics">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag() { dataLayer.push(arguments); }
               gtag('js', new Date());
               gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID}');
           `}
-        </Script>
-        <Script id="addressable-tracker">
+        </Script> */}
+        {/* <Script id="addressable-tracker">
           {`
             !function(w, d){
               w.__adrsbl = {
@@ -159,7 +159,7 @@ export default async function RootLayout({
               b.parentNode.insertBefore(s, b);
             }(window, document);
           `}
-        </Script>
+        </Script> */}
       </head>
 
       <body suppressHydrationWarning>

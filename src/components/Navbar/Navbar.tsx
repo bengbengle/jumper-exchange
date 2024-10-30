@@ -52,11 +52,11 @@ export const Navbar = ({ disableNavbar = false }) => {
 
   return (
     <Container>
-      <LogoLink id="jumper-logo" onClick={handleClick}>
+      {/* <LogoLink id="jumper-logo" onClick={handleClick}>
         <Logo
           variant={isScanPage ? 'scan' : isLearnPage ? 'learn' : 'default'}
         />
-      </LogoLink>
+      </LogoLink> */}
       {/* {!isScanPage && !isLearnPage && !disableNavbar && (
         <NavbarTabs
           navbarPageReload={isLoyaltyPage || isSuperfest || isQuestsPage}
